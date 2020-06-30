@@ -9,5 +9,7 @@ doi: https://doi.org/10.1101/2020.06.26.166157
 
 ## Table of Contents
 ###### 1. Data
+######  -> Plate Reader
+######  -> Settling Assay
 ###### 2. Scripts
 
