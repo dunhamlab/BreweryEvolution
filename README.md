@@ -21,6 +21,25 @@ doi: https://doi.org/10.1101/2020.06.26.166157
 - (F) Sensory Analysis
 - (G) Assembly Polishing
 
+# Data
+## (A) Plate Reader
+Raw data from the plate reader from the experiments documented in the manuscript are avaliable. They include data from the wort conditions as well as unmentioned experiments that utilized starting ethanol ranging from 0 to 10% (v/v).  
+  
+The files are:  
+-  2018_05_09_PDB_EtOh_Formatted.csv  
+-  2018_06_05_TestForEthanolInWort.csv  
+-  2018_06_08_GrowthCurve_YEPD_WORT.csv  
+-  2018_06_13_TestForEthanolInWort.csv  
+
+## (B) Settling Assay  
+The raw images associated with the settling assay experiments are avaliable. The two replicates are split into two directories:
+- 20180621
+- 20180524
+
+## (C) Sensory Analysis
+The reformatted responses from the sensory panel done at HomebrewCon 2018 are avaliable at:
+- Beer_ScoreSheet_Reformatted.txt
+
 # Scripts
 Please note that in many instances, the scripts outlined here are written for my computing cluster and will require some retooling if they are to be adapted for other uses. Please bear with my occasional hard coding of directories. Hopefully, they can serve as inspiration for further studies. 
 
