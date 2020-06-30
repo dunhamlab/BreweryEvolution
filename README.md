@@ -23,15 +23,17 @@ Please note that in many instances, the scripts outlined here are written for my
 
 ## (A) Alignment and Variant Calling
 ###### runSeqAlignVariantCall_20200504.sh
-- First, the reads mentioned in the paper were aligned to the SacCer3 genome from SGD. They were then preprocessed with GATK and picard tools
-- Second, variant calls for the ancestor were generated using Samtools and Freebayes.
-- Third, with the ancestor variant calls in hand, the evolved samples were called with LoFreq in paired mode and the variant calls from Samtools and Freebayes were compared to the ancestor.
-- Fourth, the variants were filetered and annotated using: yeast_annotation_chris_edits_20170925.py
-- Finally, the variants found in the clones were comapred using MakeOverlapMatrix.R to generate an overlap matrix.
+1. The reads mentioned in the paper were aligned to the SacCer3 genome from SGD. They were then preprocessed with GATK and picard tools
+2. Variant calls for the ancestor were generated using Samtools and Freebayes.
+3. With the ancestor variant calls in hand, the evolved samples were called with LoFreq in paired mode and the variant calls from Samtools and Freebayes were compared to the ancestor.
+4. The variants were filetered and annotated using: yeast_annotation_chris_edits_20170925.py
+5. The variants found in the clones were comapred using MakeOverlapMatrix.R to generate an overlap matrix.
 
 ## (B) Copy Number Analysis
 ######  runCNScripts_Populations_20200310.sh
-- First, the alignments from part (A) were measured for their genome wide depth of coverage using GATK/2. Please note that there is a new tool in GATK/4 that serves the same function. Next, 1000-bp sliding windows of coverage were generated with the IGVtools command line implementation. 
+1. The alignments from part (A) were measured for their genome wide depth of coverage using GATK/2. Please note that there is a new tool in GATK/4 that serves the same function. 
+2. 1000-bp sliding windows of coverage were generated with the IGVtools command line implementation. Two iterations of this were done to generate a file with the filtering option of MAPQ > 30 and MAPQ > 0.
+3. 
 Copy_Number_Plot_Text_20200619.R
 ######  Copy_Number_Population_AllChrom_20200609.R
 
