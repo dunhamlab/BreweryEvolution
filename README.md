@@ -81,10 +81,12 @@ Please note that in many instances, the scripts outlined here are written for my
 ## (F) Sensory Analysis
 1. Responses from HomebrewCon 2018 were aggregated using excel, then reformatted into the above-linked data sheet (ParseBeerScoreSheet_20190129.py). Those data were then processed using the script: FlavorProfillingAnalysis_20190223.R
 
-## (G) 
+## (G) Settling Assay
+1. Pictures documented in the above data section were first analyzed in Fiji using the following semi-automated script: Settling_Assay.ijm
+2. The output of these file were further processed b:y: AnalyzeSettlingData_20180612.py
 
 ## (H) Assembly Polishing
-
-
-
+1. Assemblies generated from ONT reads, demultiplexed with Guppy and assembled with SMARTdenovo were used as a reference for ONT read mapping with Minimap2 using runAssemblyPolish.sh
+2. The assemblies were then ploished with racon then medaka. 
+3. Afterwards, the Illumina reads were aligned to the polished assembly and pilon was run x3. 
 
