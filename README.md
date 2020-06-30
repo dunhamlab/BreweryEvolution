@@ -19,7 +19,8 @@ doi: https://doi.org/10.1101/2020.06.26.166157
 - (D) Phylogenomics
 - (E) Growth Rate
 - (F) Sensory Analysis
-- (G) Assembly Polishing
+- (G) Settling Assay
+- (H) Assembly Polishing
 
 # Data
 ## (A) Plate Reader
@@ -65,6 +66,7 @@ Please note that in many instances, the scripts outlined here are written for my
 2. The variants were filtered to just include the highest confident SNPs using GATK. The SNPs were then processed into a table format.
 3. Using a java script (VaraiantTableParse_GATK_BAF_20190206.jar) the table of SNPs were convereted into a ratio of reference or alternate. 
 4. The output files are then plotted using a variety of scripts: AlleleFrequency_Population_AllChrom_20200429.R, Allele_Frequency_Clones_Plot_2020428.R, and Allele_Frequency_Plot_20200619.R
+5. The selection coefficient was measured using the outputs of the above scripts and the following script: Estimating_s_20200629.R
 
 ## (D) Phylogenomics
 1. Using FastqToBam_20190802.sh and a wrapper script that pulled arguments from a sample sheet to run the many samples, the reads were aligned to SacCer3 using a methodology outlined by GATK best practices.
@@ -77,9 +79,11 @@ Please note that in many instances, the scripts outlined here are written for my
 1. The growth rate of the beer strains was calculted using the growthrates library from [growthrates](https://cran.r-project.org/web/packages/growthrates/vignettes/Introduction.html) . The script implementing that is here: GrowthCurve_GrowthRates_20200619.R
 
 ## (F) Sensory Analysis
+1. Responses from HomebrewCon 2018 were aggregated using excel, then reformatted into the above-linked data sheet (ParseBeerScoreSheet_20190129.py). Those data were then processed using the script: FlavorProfillingAnalysis_20190223.R
 
+## (G) 
 
-## (G) Assembly Polishing
+## (H) Assembly Polishing
 
 
 
