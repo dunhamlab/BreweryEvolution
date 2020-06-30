@@ -33,12 +33,12 @@ Please note that in many instances, the scripts outlined here are written for my
 ######  runCNScripts_Populations_20200310.sh
 1. The alignments from part (A) were measured for their genome wide depth of coverage using GATK/2. Please note that there is a new tool in GATK/4 that serves the same function. 
 2. 1000-bp sliding windows of coverage were generated with the IGVtools command line implementation. Two iterations of this were done to generate a file with the filtering option of MAPQ > 30 and MAPQ > 0.
-3. 
-Copy_Number_Plot_Text_20200619.R
-######  Copy_Number_Population_AllChrom_20200609.R
-
+3. These files were then compared using: wigNormalizedToAverageReadDepth_MapQ_ForPlot.py
+4. Plotting of invdividual sampels was done with: PlotCopyNumber_OneSample_20200106.R
+5. Furthering plotting, comparing multiple samples for the copy number figure were done with: Copy_Number_Plot_Text_20200619.R and Copy_Number_Population_AllChrom_20200609.R
 
 ## (C) Allele Frequency
+1. 
 ######  runVariantCall_GATK_Populations_20200310.sh >
 ######  VaraiantTableParse_GATK_BAF_20190206.jar
 ######  AlleleFrequency_Population_AllChrom_20200429.R
