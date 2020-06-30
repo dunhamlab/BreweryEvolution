@@ -16,7 +16,10 @@ doi: https://doi.org/10.1101/2020.06.26.166157
 - (A) Alignment and Variant Calling
 - (B) Copy Number Analysis
 - (C) Allele Frequency
-
+- (D) Phylogenomics
+- (E) Growth Rate
+- (F) Sensory Analysis
+- (G) Assembly Polishing
 
 # Scripts
 Please note that in many instances, the scripts outlined here are written for my computing cluster and will require some retooling if they are to be adapted for other uses. Please bear with my occasional hard coding of directories. Hopefully, they can serve as inspiration for further studies. 
@@ -38,11 +41,13 @@ Please note that in many instances, the scripts outlined here are written for my
 5. Furthering plotting, comparing multiple samples for the copy number figure were done with: Copy_Number_Plot_Text_20200619.R and Copy_Number_Population_AllChrom_20200609.R
 
 ## (C) Allele Frequency
-1. 
-######  runVariantCall_GATK_Populations_20200310.sh >
-######  VaraiantTableParse_GATK_BAF_20190206.jar
-######  AlleleFrequency_Population_AllChrom_20200429.R
-######  Allele_Frequency_Clones_Plot_2020428.R
+###### runVariantCall_GATK_Populations_20200310.sh
+1. From the alignments generated in part (A), GATK variant calling using haplotype caller was used.
+2. The variants were filtered to just include the highest confident SNPs using GATK. The SNPs were then processed into a table format.
+3. Using a java script (VaraiantTableParse_GATK_BAF_20190206.jar) the table of SNPs were convereted into a ratio of reference or alternate. 
+4. The output files are then plotted using a variety of scripts: AlleleFrequency_Population_AllChrom_20200429.R, Allele_Frequency_Clones_Plot_2020428.R, and Allele_Frequency_Plot_20200619.R
+
+
 
 
 
