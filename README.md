@@ -48,7 +48,7 @@ Please note that in many instances, the scripts outlined here are written for my
 1. The reads mentioned in the paper were aligned to the SacCer3 genome from SGD. They were then preprocessed with GATK and picard tools
 2. Variant calls for the ancestor were generated using Samtools and Freebayes.
 3. With the ancestor variant calls in hand, the evolved samples were called with LoFreq in paired mode and the variant calls from Samtools and Freebayes were compared to the ancestor.
-4. The variants were filetered and annotated using: yeast_annotation_chris_edits_20170925.py
+4. The variants were filetered with GATK and annotated using: yeast_annotation_chris_edits_20170925.py
 5. The variants found in the clones were comapred using MakeOverlapMatrix.R to generate an overlap matrix.
 
 ## (B) Copy Number Analysis
@@ -66,7 +66,20 @@ Please note that in many instances, the scripts outlined here are written for my
 3. Using a java script (VaraiantTableParse_GATK_BAF_20190206.jar) the table of SNPs were convereted into a ratio of reference or alternate. 
 4. The output files are then plotted using a variety of scripts: AlleleFrequency_Population_AllChrom_20200429.R, Allele_Frequency_Clones_Plot_2020428.R, and Allele_Frequency_Plot_20200619.R
 
+## (D) Phylogenomics
+1. Using FastqToBam_20190802.sh and a wrapper script that pulled arguments from a sample sheet to run the many samples, the reads were aligned to SacCer3 using a methodology outlined by GATK best practices.
+2. Next, the alignments were merged between different sequencing runs in the Mark Duplicates stage (picard tools), and variant called using GATK/4 Haplotype Caller in the GVCF mode in MarkDupliates_And_VariantCall_20200428.sh
+3. The GVCFs from all of the samples were then combined using GenotypeGVCFs_GenomicsDB_20200106.sh which used GenomicsDBImport and GenotypeGVCFs from GATK/4 to jointly call variants. The variants were then filtered using GATK/4.
+4. Then using MakeFastaForTree_20191221.sh, fasta files for each sample were created using BCFtools (two genomes concatenated with the first having the reference allele in the case of a heterozygous position and the alternate in the second).
+5. A phylogenetic tree was then made with MakeTree_Small_20191218.sh
 
+## (E) Growth Rate
+1. The growth rate of the beer strains was calculted using the growthrates library from [growthrates] (https://cran.r-project.org/web/packages/growthrates/vignettes/Introduction.html). The script implementing that is here: GrowthCurve_GrowthRates_20200619.R
+
+## (F) Sensory Analysis
+
+
+## (G) Assembly Polishing
 
 
 
