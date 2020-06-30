@@ -74,7 +74,7 @@ Please note that in many instances, the scripts outlined here are written for my
 5. A phylogenetic tree was then made with MakeTree_Small_20191218.sh
 
 ## (E) Growth Rate
-1. The growth rate of the beer strains was calculted using the growthrates library from [growthrates] (https://cran.r-project.org/web/packages/growthrates/vignettes/Introduction.html). The script implementing that is here: GrowthCurve_GrowthRates_20200619.R
+1. The growth rate of the beer strains was calculted using the growthrates library from [growthrates](https://cran.r-project.org/web/packages/growthrates/vignettes/Introduction.html) . The script implementing that is here: GrowthCurve_GrowthRates_20200619.R
 
 ## (F) Sensory Analysis
 
