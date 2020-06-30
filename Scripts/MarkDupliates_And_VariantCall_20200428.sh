@@ -25,7 +25,7 @@ WORK_DIR=/net/dunham/vol2/Cris_L/BeerID/WorkDirectory/${DATASET}_Dataset
 FASTQ_DIR=/net/dunham/vol2/Cris_L/BeerID/Fastqs/${DATASET}_Dataset
 ## Aligns to the S288C reference genome with the 2-Micron plasmid added
 REF=/net/dunham/vol2/Cris_L/ReferenceGenome/Reference_2Micron/sacCer3_2micron.fasta
-SAMPLE_SHEET=/net/dunham/vol2/Cris_L/BeerID/Scripts/SampleSheet/SampleSheet_4251.txt
+SAMPLE_SHEET=/net/dunham/vol2/Cris_L/BeerID/Scripts/SampleSheet/SampleSheet.txt
 
 cd ${WORK_DIR}
 
