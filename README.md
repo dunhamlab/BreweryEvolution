@@ -8,10 +8,11 @@ These are the scripts and data that were used to generate the figures presented 
 doi: https://doi.org/10.1101/2020.06.26.166157
 
 ## Table of Contents
-###### 1. Data
-######  (A) Plate Reader
-######  (B) Settling Assay
-######  (C) Sensory Data
-###### 2. Scripts
-######  (A) 
+ 1. Data
+  (A) Plate Reader
+  (B) Settling Assay
+  (C) Sensory Data
+ 2. Scripts
+  (A) Copy Number
+
 
