@@ -13,9 +13,9 @@ doi: https://doi.org/10.1101/2020.06.26.166157
 * (B) Settling Assay
 * (C) Sensory Data
 2. Scripts
-*(A) Alignment and Variant Calling
-*(B) Copy Number Analysis
-*(C) Allele Frequency
+* (A) Alignment and Variant Calling
+* (B) Copy Number Analysis
+* (C) Allele Frequency
 
 
 ## (A) Alignment and Variant Calling
