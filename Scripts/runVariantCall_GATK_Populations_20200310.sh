@@ -29,7 +29,6 @@ module load bedtools/latest
 SAMPLE=$1 #sample prefix (ex: Sample-01)
 WORKDIR=/net/dunham/vol2/Cris_L/PostDocBrewing/WorkDirectory/Populations #CHANGE
 REF=/net/dunham/vol2/Caiti/reference_seq/sacCer3.fasta
-ANNOTATE=/net/dunham/vol2/Archives/Archived_UW_people/Anna_Sunshine/dunham/sequencing_analysis/SNPs/SNVs_paired_end
 SCRIPTS=/net/dunham/vol2/Cris_L/Aaron_Reanalyze/Scripts
 
 cd ${WORKDIR}
@@ -83,16 +82,16 @@ module load java_jdk/8u91
 
 ## Changes the table format into allele frequencies for plotting
 # double AlleleFreq = (Double.parseDouble(APArray[0]) / Total); // REF is 1 Alt is 0
-java -Xmx2g -jar /net/dunham/vol2/Cris_L/Scripts/VaraiantTableParse_GATK_BAF_20190206.jar \
+java -Xmx2g -jar ${SCRIPTS}/VaraiantTableParse_GATK_BAF_20190206.jar \
 	${WORKDIR}/${SAMPLE}/${SAMPLE}_GATK_HaplotypeCaller_ALL_SNPS_Tagged_Filtered.table \
-	/net/dunham/vol2/Cris_L/Scripts/ChromSizes_PDB.txt \
+	${SCRIPTS}/ChromSizes_PDB.txt \
 	${WORKDIR}/${SAMPLE}/
 
 module load gcc/8.1.0
 module load R/3.5.1
 
 ## Plot allele frequency REF is 1.0 and Alt is 0.0
-Rscript /net/dunham/vol2/Cris_L/WalkerColab/Scripts/PlotAlleleFreq_OneSample_20190207.R \
+Rscript ${SCRIPTS}/PlotAlleleFreq_OneSample_20190207.R \
 	${WORKDIR} \
 	${SAMPLE} ## Sample name
 
