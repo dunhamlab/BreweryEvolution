@@ -120,16 +120,3 @@ tabix -f ${WORK_DIR}/${OUT_NAME}.snp.filt.vcf.gz
 
 rm ${WORK_DIR}/${OUT_NAME}.snp.prefilt.vcf
 rm ${WORK_DIR}/${OUT_NAME}.indel.prefilt.vcf
-
-#java -Xmx64g -jar $SNPEFF_DIR/snpEff.jar sacCer \
-#       ${WORK_DIR}/${OUT_NAME}.filt.vcf > ${WORK_DIR}/${OUT_NAME}.filt.annotated.vcf
-#
-#java -Xmx64g -jar $SNPEFF_DIR/SnpSift.jar filter \
-#       "ANN[*].BIOTYPE has 'protein_coding'" \
-#       ${WORK_DIR}/${OUT_NAME}.filt.annotated.vcf > ${WORK_DIR}/${OUT_NAME}.filt.annotated.protein.vcf
-#
-#python ${VCF2PHYLIP}/vcf2phylip.py \
-#	-i ${WORK_DIR}/${OUT_NAME}.filt.vcf
-
-
-	
